@@ -1,1 +1,1 @@
-database_version = "MYSQL_5_7"
+database_version = "MYSQL_8_0"

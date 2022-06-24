@@ -35,7 +35,7 @@ resource "random_id" "db_name_suffix" {
 resource "google_sql_database_instance" "instance" {
   name             = "private-instance-${random_id.db_name_suffix.hex}"
   region           = "us-central1"
-  database_version = "MYSQL_5_7"
+  database_version = var.database_version
 
   depends_on = [google_service_networking_connection.private_vpc_connection]
 
